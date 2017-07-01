@@ -1,0 +1,402 @@
+2017-07-01 10:12:10.667  INFO 5712 --- [main] com.lab.App                              : Starting App on Devni with PID 5712 (C:\Users\Devni-PC\Documents\3rd_year\1st_semester\AF\Spring\Five\target\classes started by Devni-PC in C:\Users\Devni-PC\Documents\3rd_year\1st_semester\AF\Spring\Five)
+2017-07-01 10:12:10.667  INFO 5712 --- [main] com.lab.App                              : No active profile set, falling back to default profiles: default
+2017-07-01 10:12:10.963  INFO 5712 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69575c7f: startup date [Sat Jul 01 10:12:10 IST 2017]; root of context hierarchy
+2017-07-01 10:12:18.838  INFO 5712 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-07-01 10:12:18.885  INFO 5712 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-07-01 10:12:18.885  INFO 5712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-07-01 10:12:19.088  INFO 5712 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-01 10:12:19.088  INFO 5712 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8140 ms
+2017-07-01 10:12:19.573  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-01 10:12:19.588  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-07-01 10:12:19.588  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-01 10:12:19.588  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-01 10:12:19.604  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-01 10:12:19.604  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-01 10:12:19.604  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-07-01 10:12:19.604  INFO 5712 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-07-01 10:12:21.417  INFO 5712 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-07-01 10:12:23.042  INFO 5712 --- [cluster-ClusterId{value='5957282d992a231650b63560', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongodb-driver-core-3.4.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_102]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_102]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_102]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_102]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_102]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_102]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_102]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_102]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.4.2.jar:na]
+	... 3 common frames omitted
+
+2017-07-01 10:12:23.589  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/labtypes],methods=[GET],produces=[application/json]}" onto public java.util.List<com.lab.model.LabType> com.lab.controller.LabTypeController.getLabTypes()
+2017-07-01 10:12:23.604  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/labtypes],methods=[POST],consumes=[application/json]}" onto public com.lab.model.LabType com.lab.controller.LabTypeController.CreateLabType(com.lab.model.LabType)
+2017-07-01 10:12:23.604  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-07-01 10:12:23.620  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-07-01 10:12:23.635  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-07-01 10:12:23.635  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-07-01 10:12:23.651  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-01 10:12:23.651  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-01 10:12:24.042  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-07-01 10:12:24.042  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.042  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-07-01 10:12:24.042  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-07-01 10:12:24.042  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.042  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-07-01 10:12:24.057  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.057  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-07-01 10:12:24.057  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.057  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.057  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.057  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.073  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-07-01 10:12:24.073  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-07-01 10:12:24.073  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.073  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.073  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:12:24.073  INFO 5712 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-07-01 10:12:24.557  INFO 5712 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69575c7f: startup date [Sat Jul 01 10:12:10 IST 2017]; root of context hierarchy
+2017-07-01 10:12:24.635  INFO 5712 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 10:12:24.635  INFO 5712 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 10:12:24.714  INFO 5712 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 10:12:25.151  INFO 5712 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-01 10:12:25.182  INFO 5712 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-07-01 10:12:25.292  INFO 5712 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-07-01 10:12:25.292  INFO 5712 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-07-01 10:12:25.354  INFO 5712 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-07-01 10:12:25.417  INFO 5712 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-07-01 10:12:25.620  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByPrincipalAndAfterAndTypeUsingGET_1
+2017-07-01 10:12:25.854  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2017-07-01 10:12:25.870  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2017-07-01 10:12:25.870  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2017-07-01 10:12:25.885  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2017-07-01 10:12:25.885  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2017-07-01 10:12:25.901  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2017-07-01 10:12:25.901  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2017-07-01 10:12:25.901  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2017-07-01 10:12:25.901  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2017-07-01 10:12:25.917  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2017-07-01 10:12:25.932  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2017-07-01 10:12:25.932  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2017-07-01 10:12:25.948  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2017-07-01 10:12:25.964  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2017-07-01 10:12:25.964  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2017-07-01 10:12:26.026  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2017-07-01 10:12:26.026  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2017-07-01 10:12:26.042  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2017-07-01 10:12:26.042  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2017-07-01 10:12:26.089  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2017-07-01 10:12:26.104  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2017-07-01 10:12:26.104  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2017-07-01 10:12:26.135  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_22
+2017-07-01 10:12:26.135  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_23
+2017-07-01 10:12:26.151  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_24
+2017-07-01 10:12:26.167  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_25
+2017-07-01 10:12:26.167  INFO 5712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2017-07-01 10:12:26.448  INFO 5712 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-07-01 10:12:26.479  INFO 5712 --- [main] com.lab.App                              : Started App in 17.745 seconds (JVM running for 52.78)
+2017-07-01 10:14:10.933  INFO 5712 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-01 10:14:10.933  INFO 5712 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-01 10:14:11.011  INFO 5712 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 78 ms
+2017-07-01 10:14:58.058  INFO 5712 --- [http-nio-8081-exec-7] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]}. Waiting for 30000 ms before timing out
+2017-07-01 10:15:28.067 ERROR 5712 --- [http-nio-8081-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]] with root cause
+
+com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:402) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:510) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:81) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.Mongo.execute(Mongo.java:836) ~[mongodb-driver-3.4.2.jar:na]
+	at com.mongodb.Mongo$2.execute(Mongo.java:823) ~[mongodb-driver-3.4.2.jar:na]
+	at com.mongodb.DBCursor.initializeCursor(DBCursor.java:870) ~[mongodb-driver-3.4.2.jar:na]
+	at com.mongodb.DBCursor.hasNext(DBCursor.java:142) ~[mongodb-driver-3.4.2.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:1964) ~[spring-data-mongodb-1.10.3.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:1784) ~[spring-data-mongodb-1.10.3.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:1767) ~[spring-data-mongodb-1.10.3.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:641) ~[spring-data-mongodb-1.10.3.RELEASE.jar:na]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:359) ~[spring-data-mongodb-1.10.3.RELEASE.jar:na]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:197) ~[spring-data-mongodb-1.10.3.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:504) ~[spring-data-commons-1.13.3.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:489) ~[spring-data-commons-1.13.3.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461) ~[spring-data-commons-1.13.3.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.13.3.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57) ~[spring-data-commons-1.13.3.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at com.sun.proxy.$Proxy100.findAll(Unknown Source) ~[na:na]
+	at com.lab.service.impl.LabTypeServiceImpl.listLabTypes(LabTypeServiceImpl.java:26) ~[classes/:na]
+	at com.lab.controller.LabTypeController.getLabTypes(LabTypeController.java:22) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_102]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_102]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_102]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_102]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_102]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_102]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.14.jar:8.5.14]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_102]
+
+2017-07-01 10:15:50.827  INFO 5712 --- [cluster-ClusterId{value='5957282d992a231650b63560', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:38, serverValue:1}] to localhost:27017
+2017-07-01 10:15:50.863  INFO 5712 --- [cluster-ClusterId{value='5957282d992a231650b63560', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2086795}
+2017-07-01 10:16:28.406  INFO 5712 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69575c7f: startup date [Sat Jul 01 10:12:10 IST 2017]; root of context hierarchy
+2017-07-01 10:16:28.440  INFO 5712 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-07-01 10:16:28.461  INFO 5712 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-07-01 10:16:28.474  INFO 5712 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-01 10:16:51.756  INFO 3188 --- [main] com.lab.App                              : Starting App on Devni with PID 3188 (C:\Users\Devni-PC\Documents\3rd_year\1st_semester\AF\Spring\Five\target\classes started by Devni-PC in C:\Users\Devni-PC\Documents\3rd_year\1st_semester\AF\Spring\Five)
+2017-07-01 10:16:51.762  INFO 3188 --- [main] com.lab.App                              : No active profile set, falling back to default profiles: default
+2017-07-01 10:16:51.912  INFO 3188 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f9f28bc: startup date [Sat Jul 01 10:16:51 IST 2017]; root of context hierarchy
+2017-07-01 10:16:56.029  INFO 3188 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-07-01 10:16:56.065  INFO 3188 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-07-01 10:16:56.067  INFO 3188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-07-01 10:16:57.109  INFO 3188 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-01 10:16:57.119  INFO 3188 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5231 ms
+2017-07-01 10:16:57.475  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-01 10:16:57.482  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-07-01 10:16:57.493  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-01 10:16:57.494  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-01 10:16:57.501  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-01 10:16:57.502  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-01 10:16:57.505  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-07-01 10:16:57.506  INFO 3188 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-07-01 10:16:58.350  INFO 3188 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-07-01 10:16:58.544  INFO 3188 --- [cluster-ClusterId{value='59572942992a230c74b38e98', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2017-07-01 10:16:58.554  INFO 3188 --- [cluster-ClusterId{value='59572942992a230c74b38e98', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=851420}
+2017-07-01 10:16:59.746  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/labtypes],methods=[GET],produces=[application/json]}" onto public java.util.List<com.lab.model.LabType> com.lab.controller.LabTypeController.getLabTypes()
+2017-07-01 10:16:59.754  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/labtypes],methods=[POST],consumes=[application/json]}" onto public com.lab.model.LabType com.lab.controller.LabTypeController.CreateLabType(com.lab.model.LabType)
+2017-07-01 10:16:59.755  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-07-01 10:16:59.766  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-07-01 10:16:59.767  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-07-01 10:16:59.776  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-07-01 10:16:59.781  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-01 10:16:59.782  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-01 10:17:00.521  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.523  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.525  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-07-01 10:17:00.528  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-07-01 10:17:00.528  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.539  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-07-01 10:17:00.540  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.541  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.543  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.546  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.547  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.549  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-07-01 10:17:00.551  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-07-01 10:17:00.561  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-07-01 10:17:00.564  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-07-01 10:17:00.565  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-07-01 10:17:00.566  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.567  INFO 3188 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 10:17:00.925  INFO 3188 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f9f28bc: startup date [Sat Jul 01 10:16:51 IST 2017]; root of context hierarchy
+2017-07-01 10:17:01.015  INFO 3188 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 10:17:01.018  INFO 3188 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 10:17:01.092  INFO 3188 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 10:17:01.512  INFO 3188 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-01 10:17:01.533  INFO 3188 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-07-01 10:17:01.639  INFO 3188 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-07-01 10:17:01.641  INFO 3188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-07-01 10:17:01.700  INFO 3188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-07-01 10:17:01.736  INFO 3188 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-07-01 10:17:01.910  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByPrincipalAndAfterAndTypeUsingGET_1
+2017-07-01 10:17:02.141  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2017-07-01 10:17:02.146  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2017-07-01 10:17:02.149  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2017-07-01 10:17:02.154  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2017-07-01 10:17:02.164  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2017-07-01 10:17:02.168  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2017-07-01 10:17:02.171  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2017-07-01 10:17:02.179  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2017-07-01 10:17:02.189  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2017-07-01 10:17:02.193  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2017-07-01 10:17:02.196  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2017-07-01 10:17:02.202  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2017-07-01 10:17:02.207  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2017-07-01 10:17:02.213  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2017-07-01 10:17:02.217  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2017-07-01 10:17:02.256  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2017-07-01 10:17:02.273  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2017-07-01 10:17:02.288  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2017-07-01 10:17:02.296  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2017-07-01 10:17:02.335  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2017-07-01 10:17:02.348  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2017-07-01 10:17:02.352  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2017-07-01 10:17:02.368  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_22
+2017-07-01 10:17:02.377  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_23
+2017-07-01 10:17:02.411  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_24
+2017-07-01 10:17:02.418  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_25
+2017-07-01 10:17:02.451  INFO 3188 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2017-07-01 10:17:02.598  INFO 3188 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-07-01 10:17:02.608  INFO 3188 --- [main] com.lab.App                              : Started App in 11.465 seconds (JVM running for 24.321)
+2017-07-01 10:17:37.547  INFO 3188 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-01 10:17:37.549  INFO 3188 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-01 10:17:37.604  INFO 3188 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 55 ms
+2017-07-01 10:17:54.878  INFO 3188 --- [http-nio-8081-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:3}] to localhost:27017
+2017-07-01 22:49:43.856  INFO 4152 --- [main] com.lab.App                              : Starting App v1.0-SNAPSHOT on Devni with PID 4152 (C:\Users\Devni-PC\Documents\3rd_year\1st_semester\AF\Spring\Five\target\labApp-1.0-SNAPSHOT.jar started by Devni-PC in C:\Users\Devni-PC\Documents\3rd_year\1st_semester\AF\Spring\Five)
+2017-07-01 22:49:43.881  INFO 4152 --- [main] com.lab.App                              : No active profile set, falling back to default profiles: default
+2017-07-01 22:49:44.222  INFO 4152 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2cdf8d8a: startup date [Sat Jul 01 22:49:44 IST 2017]; root of context hierarchy
+2017-07-01 22:49:55.036  INFO 4152 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-07-01 22:49:55.135  INFO 4152 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-07-01 22:49:55.153  INFO 4152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-07-01 22:49:56.840  INFO 4152 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-01 22:49:56.965  INFO 4152 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12748 ms
+2017-07-01 22:49:57.637  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-01 22:49:57.657  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-07-01 22:49:57.665  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-01 22:49:57.666  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-01 22:49:57.673  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-01 22:49:57.673  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-01 22:49:57.675  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-07-01 22:49:57.677  INFO 4152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-07-01 22:49:58.796  INFO 4152 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-07-01 22:49:59.493  INFO 4152 --- [cluster-ClusterId{value='5957d9be992a231038e04e53', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+2017-07-01 22:49:59.696  INFO 4152 --- [cluster-ClusterId{value='5957d9be992a231038e04e53', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1602069}
+2017-07-01 22:50:02.344  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/labtypes],methods=[GET],produces=[application/json]}" onto public java.util.List<com.lab.model.LabType> com.lab.controller.LabTypeController.getLabTypes()
+2017-07-01 22:50:02.421  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/labtypes],methods=[POST],consumes=[application/json]}" onto public com.lab.model.LabType com.lab.controller.LabTypeController.CreateLabType(com.lab.model.LabType)
+2017-07-01 22:50:02.423  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-07-01 22:50:02.447  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-07-01 22:50:02.448  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-07-01 22:50:02.462  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-07-01 22:50:02.468  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-01 22:50:02.470  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-01 22:50:02.892  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-07-01 22:50:02.894  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-07-01 22:50:02.895  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.897  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-07-01 22:50:02.899  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-07-01 22:50:02.912  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.913  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.917  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.918  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.919  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.921  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-07-01 22:50:02.923  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-07-01 22:50:02.924  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.932  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.934  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-07-01 22:50:02.935  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:02.937  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-07-01 22:50:02.939  INFO 4152 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-07-01 22:50:03.532  INFO 4152 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2cdf8d8a: startup date [Sat Jul 01 22:49:44 IST 2017]; root of context hierarchy
+2017-07-01 22:50:03.674  INFO 4152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 22:50:03.711  INFO 4152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 22:50:04.169  INFO 4152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-01 22:50:04.966  INFO 4152 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-01 22:50:05.076  INFO 4152 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-07-01 22:50:05.178  INFO 4152 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-07-01 22:50:05.199  INFO 4152 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-07-01 22:50:05.291  INFO 4152 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-07-01 22:50:05.335  INFO 4152 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-07-01 22:50:05.568  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByPrincipalAndAfterAndTypeUsingGET_1
+2017-07-01 22:50:05.949  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2017-07-01 22:50:05.954  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2017-07-01 22:50:05.960  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2017-07-01 22:50:05.967  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2017-07-01 22:50:06.065  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2017-07-01 22:50:06.070  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2017-07-01 22:50:06.073  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2017-07-01 22:50:06.080  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2017-07-01 22:50:06.091  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2017-07-01 22:50:06.096  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2017-07-01 22:50:06.099  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2017-07-01 22:50:06.103  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2017-07-01 22:50:06.113  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2017-07-01 22:50:06.121  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2017-07-01 22:50:06.125  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2017-07-01 22:50:06.490  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2017-07-01 22:50:06.655  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2017-07-01 22:50:06.666  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2017-07-01 22:50:06.676  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2017-07-01 22:50:06.737  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2017-07-01 22:50:06.881  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2017-07-01 22:50:06.887  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2017-07-01 22:50:06.903  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_22
+2017-07-01 22:50:06.908  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_23
+2017-07-01 22:50:06.939  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_24
+2017-07-01 22:50:06.943  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_25
+2017-07-01 22:50:06.952  INFO 4152 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2017-07-01 22:50:07.409  INFO 4152 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-07-01 22:50:07.429  INFO 4152 --- [main] com.lab.App                              : Started App in 29.163 seconds (JVM running for 36.842)
+2017-07-01 22:54:30.601  INFO 4152 --- [http-nio-8081-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-01 22:54:30.730  INFO 4152 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-01 22:54:30.826  INFO 4152 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 95 ms
+2017-07-01 22:56:59.013  INFO 4152 --- [http-nio-8081-exec-5] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
+2017-07-01 23:53:22.869  INFO 4152 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2cdf8d8a: startup date [Sat Jul 01 22:49:44 IST 2017]; root of context hierarchy
+2017-07-01 23:53:32.232  INFO 4152 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-07-01 23:53:34.335  INFO 4152 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-07-01 23:53:36.128  INFO 4152 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-01 23:53:37.855  INFO 4152 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:4}] to localhost:27017 because the pool has been closed.

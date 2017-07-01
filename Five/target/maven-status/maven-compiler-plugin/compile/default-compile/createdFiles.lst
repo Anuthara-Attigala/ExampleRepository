@@ -1,0 +1,6 @@
+com\lab\controller\LabTypeController.class
+com\lab\service\impl\LabTypeServiceImpl.class
+com\lab\model\LabType.class
+com\lab\App.class
+com\lab\repository\LabTypeRepository.class
+com\lab\service\LabTypeService.class
